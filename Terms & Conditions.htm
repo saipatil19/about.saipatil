@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions - Sai Patil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ==========================================
+       THEME & VARIABLES (Matching Portfolio)
+       ========================================== */
+    :root {
+      --bg-color: #0b0f17;
+      --card-bg: rgba(21, 29, 43, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary-accent: #38bdf8;
+      --secondary-accent: #6366f1;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.7;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Ambient Background Glow */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.08) 50%, rgba(0,0,0,0) 80%);
+      z-index: -1;
+      pointer-events: none;
+      filter: blur(50px);
+    }
+
+    a {
+      color: var(--primary-accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #7dd3fc;
+    }
+
+    /* ==========================================
+       HEADER / NAVBAR
+       ========================================== */
+    header {
+      width: 100%;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 23, 0.8);
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--primary-accent);
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(56, 189, 248, 0.1);
+      border-color: rgba(56, 189, 248, 0.3);
+      color: var(--primary-accent);
+    }
+
+    /* ==========================================
+       MAIN CONTENT
+       ========================================== */
+    main {
+      flex: 1;
+      max-width: 900px;
+      width: 90%;
+      margin: 3rem auto 5rem;
+    }
+
+    .doc-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary-accent);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .last-updated {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: linear-gradient(to bottom, var(--primary-accent), var(--secondary-accent));
+      border-radius: 2px;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    li::before {
+      content: '•';
+      color: var(--primary-accent);
+      font-weight: bold;
+      position: absolute;
+      left: 0.5rem;
+    }
+
+    .contact-box {
+      background: rgba(56, 189, 248, 0.05);
+      border: 1px solid rgba(56, 189, 248, 0.15);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    /* ==========================================
+       FOOTER
+       ========================================== */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      background: rgba(11, 15, 23, 0.9);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      main {
+        width: 92%;
+        margin-top: 2rem;
+      }
+      .content-card {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a class="logo">Sai Patil<span>.</span></a>
+      <a href="https://about-saipatil.netlify.app/" class="back-btn">
+        &#8592; Back to Portfolio
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="doc-header">
+      <span class="badge">Legal Agreement</span>
+      <h1>Terms & Conditions</h1>
+      <p class="last-updated">Effective Date: August 2026 | Last Updated: August 2026</p>
+    </div>
+
+    <div class="content-card">
+      
+      <div class="section">
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using this website (<strong>about-saipatil.netlify.app</strong>), you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please refrain from using the website.</p>
+      </div>
+
+      <div class="section">
+        <h2>2. Intellectual Property Rights</h2>
+        <p>Unless explicitly stated otherwise, all content on this site—including text, portfolio code, UI/UX designs, web elements, graphic assets, and project showcases (such as <em>India's Coffee Beans</em> and AI web apps)—is the intellectual property of <strong>Sai Patil</strong>.</p>
+        <p>You may view, download, or bookmark content for personal, non-commercial, and educational purposes only. You are prohibited from:</p>
+        <ul>
+          <li>Republishing, copying, or duplicating site source code without prior authorization.</li>
+          <li>Selling, renting, or sub-licensing material from this website.</li>
+          <li>Claiming ownership over any projects or designs created by Sai Patil.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>3. Services & Freelance Work</h2>
+        <p>This website serves as a professional portfolio showcasing web development, AI integration projects, and student work. Reaching out through the provided contact methods (Email or Instagram) does not automatically create a binding client contract.</p>
+        <p>All freelance web development services, project timelines, and deliverables will be formally agreed upon via written agreement prior to starting any project.</p>
+      </div>
+
+      <div class="section">
+        <h2>4. External Links & Showcase Projects</h2>
+        <p>This portfolio contains links to external websites, web applications, and social platforms (including Instagram and Netlify-hosted project demos). I am not responsible for the content, privacy policies, or practices of third-party websites.</p>
+      </div>
+
+      <div class="section">
+        <h2>5. Disclaimer of Warranties</h2>
+        <p>The materials and project demos on this website are provided on an "as is" and "as available" basis. While I strive to keep code, links, and information accurate and up-to-date, no representations or warranties of any kind are made regarding functionality or availability.</p>
+      </div>
+
+      <div class="section">
+        <h2>6. Limitation of Liability</h2>
+        <p>In no event shall Sai Patil be held liable for any damages arising out of the use or inability to use the materials on this website, including software errors, server downtime, or third-party performance issues.</p>
+      </div>
+
+      <div class="section">
+        <h2>7. Changes to Terms</h2>
+        <p>I reserve the right to revise these terms at any time without prior notice. By continuing to use this site after updates are posted, you agree to be bound by the updated version of these terms.</p>
+      </div>
+
+      <div class="section">
+        <h2>8. Contact Information</h2>
+        <p>If you have any questions or inquiries regarding these Terms and Conditions, please feel free to reach out:</p>
+        <div class="contact-box">
+          <p><strong>Sai Patil</strong> — AI Web Developer & Student</p>
+          <p>📧 Email: <a href="mailto:saipatil191916@gmail.com">saipatil191916@gmail.com</a></p>
+          <p>📷 Instagram: <a href="https://www.instagram.com/sai.patil_98" target="_blank" rel="noopener">@sai.patil_98</a></p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p> 2026 Sai Patil. Built and Learn. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
